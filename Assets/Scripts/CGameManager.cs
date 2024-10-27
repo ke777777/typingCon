@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem; // 新しいInput SystemのAPIを使用するために追加
 
 public class CGameManager : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class CGameManager : MonoBehaviour
         ViewTextMesh.text = ViewText[0];
         InputTextMesh.text = input_text;
 
+        // OVRManagerの状態を確認するデバッグログ
+        Debug.Log("OVRManager isHmdPresent: " + OVRManager.isHmdPresent);
         // 入力回数を初期化して表示
         UpdateInputCountText();
         // 誤った入力回数を初期化

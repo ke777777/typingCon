@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using UnityEngine.InputSystem; // 新しいInput SystemのAPIを使用するために追加
 
 public class PressEnter : MonoBehaviour
@@ -9,8 +8,8 @@ public class PressEnter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Enterキーが押されたとき
-        if (Input.GetKeyDown(KeyCode.Return))
+        // 新しいInput Systemを使用してEnterキーの入力をチェック
+        if (Keyboard.current.enterKey.wasPressedThisFrame) 
         {
             LoadMainScene(); // シーンを遷移するメソッドを呼び出す
         }
@@ -18,6 +17,7 @@ public class PressEnter : MonoBehaviour
 
     private void LoadMainScene()
     {
+
         // "main"シーンを読み込む
         SceneManager.LoadScene("Main");
     }

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+
 public class ScoreManager : MonoBehaviour
 {
     private CRomaTypeEngine cromaTypeEngine;
