@@ -70,3 +70,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# 大容量ファイルを除外
+Assets/Font/NotoSansJP-Medium SDF.asset
+Assets/Font/NotoSansJP-Regular SDF.asset
+Assets/Oculus/LipSync/Plugins/MacOSX/OVRLipSync.bundle
+Assets/Oculus/LipSync/Plugins/iOS/libOVRLipSync.dylib
